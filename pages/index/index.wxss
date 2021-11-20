@@ -1,0 +1,12 @@
+/**index.wxss**/
+.container{
+  width:100%;
+}
+.back {
+  height: 400rpx;
+  width: 100%;
+}
+.back image {
+  height: 100%;
+  width: 100%;
+}

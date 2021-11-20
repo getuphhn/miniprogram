@@ -1,0 +1,2 @@
+<!--pages/me/me.wxml-->
+<button bindtap="login">登录搜索</button>
