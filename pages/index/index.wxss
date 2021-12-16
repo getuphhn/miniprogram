@@ -1,12 +1,46 @@
 /**index.wxss**/
+page{
+  height:100%;
+}
 .container{
   width:100%;
+  height:100%;
+  background-size: 100% 100%;
 }
-.back {
-  height: 400rpx;
-  width: 100%;
+.message{
+  position:absolute;
+  top:120px;
+  width:80%;
+  height:50px;
+  border-radius: 10px;
+  background-color:white;
 }
-.back image {
-  height: 100%;
-  width: 100%;
+.func{
+  position:absolute;
+  top:200px;
+  width:80%;
+  height:150px;
+  border-radius: 10px;
+  background-color:white;
 }
+.func text{
+  display:block;
+  font-size:11px;
+}
+.btn1{
+  background-color:rgb(50, 156, 205);
+  border-radius: 20px;
+  color:white;
+}
+.btn2{
+  margin:20px;
+  padding:0;
+  display:inline-block;
+  background-color: white;
+}
+.btn-img2{
+  size:100%;
+  width:25px;
+  height:25px;
+}
+

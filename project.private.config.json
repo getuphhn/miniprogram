@@ -1,0 +1,34 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/me/right",
+                    "pathName": "pages/map/map",
+                    "query": "",
+                    "scene": 1000,
+                    "partialCompile": {
+                        "enabled": true,
+                        "pages": []
+                    }
+                },
+                {
+                    "name": "pages/me/myInfo",
+                    "pathName": "pages/me/me",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

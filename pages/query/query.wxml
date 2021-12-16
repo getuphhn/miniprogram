@@ -1,0 +1,19 @@
+<view class="wrap">
+    <view class="containerBox">
+        <view class="textBox fl">
+            <image src='https://s4.ax1x.com/2021/12/12/oq8NB6.png' style="width:20px;height:20px;" />你好！我是你的智能助手小蜜
+        </view>
+        <view wx:key="{{index}}" wx:for="{{allContentList}}">
+            <view wx:key="{{index}}" wx:if="{{index%2 == 1}}" class="textBox fl">
+                <image src='https://s4.ax1x.com/2021/12/12/oq8NB6.png' style="width:20px;height:20px;" />{{item.value}}
+            </view>
+            <view wx:key="{{index}}" wx:if="{{index%2==0}}" class="textBox fr">{{item.value}}
+                <image src='https://s4.ax1x.com/2021/12/12/oq82Hf.png' style="width:20px;height:20px;" />
+            </view>
+        </view>
+    </view>
+    <view class="handleBox">
+        <input class="input_submit" placeholder="有什么问题，可以问我哟" value="{{inputTemp}}" bindinput="bindKeyInput" />
+        <button type="submit" class="btn_submit" size="mini" bindtap="submitTo">发送</button>
+    </view>
+</view>

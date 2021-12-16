@@ -1,0 +1,44 @@
+<!--pages/me/myInfo.wxml-->
+<view class="container">
+  <view class="page-head">
+    <text>编辑个人资料</text>
+    <image class="head" src="{{userInfo.headimg}}" bindtap="modHead"></image>
+  </view>
+  <view class="page-body">
+    <form bindsubmit="saveInfo">
+      <view class="page-data">
+        <view class="data-item">
+          <text>昵称</text><input type="text" name="nickname" value="{{userInfo.nickname}}"/>
+          <view class="line"></view>
+        </view>
+        <view class="data-item">
+          <text>姓名</text><input type="text" name="name" value="{{userInfo.name}}" />
+          <view class="line"></view>
+        </view>
+        <view class="data-item">
+          <text>性别</text>
+          <view class="genderbox">
+            <radio-group name="gender">
+              <radio color="#fff" value="男" checked="{{male}}">男</radio>
+              <radio color="#fff" value="女" checked="{{female}}">女</radio>
+            </radio-group>
+          </view>
+          <view class="line"></view>
+        </view>
+        <view class="data-item">
+          <text>身份证号</text><input type="text" name="id" value="{{userInfo.id}}" />
+          <view class="line"></view>
+        </view>
+        <view class="data-item">
+          <text>手机号</text><input type="text" name="phone" value="{{userInfo.phone}}" />
+          <view class="line"></view>
+        </view>
+        <view class="data-item">
+          <text>邮箱</text><input type="text" name="email" value="{{userInfo.email}}" />
+          <view class="line"></view>
+        </view>
+      </view>
+      <button class="savedata" form-type="submit" style="width:90%;">保存</button>
+    </form>
+  </view>
+</view>

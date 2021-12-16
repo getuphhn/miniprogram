@@ -1,0 +1,162 @@
+/* pages/queueonline/queue.wxss */
+.games{
+   width:100px; 
+   height:80px;
+   border-top-left-radius:15px;
+   border-bottom-left-radius:15px;
+   
+}
+.holder{
+   
+   border-radius: 15px;
+   width:90%;
+   margin-left:15px;
+   margin-top:30px;
+   height:80px;
+   position:relative;
+   box-shadow: 1px 3px 1px #888888; 
+   display: inline-block;
+}
+.text{
+  position:absolute;
+  font-weight: bolder;
+   right:45px;
+   top:3px;
+}
+image[src="../../image/play05.jpeg"]+view{
+   right:15px;
+ 
+}
+.end{
+   height:40px;
+   margin-top:30px;
+   margin-bottom:50px;
+   text-align: center;
+}
+.scroll{
+   height:115px;
+   position:relative;
+}
+.book{
+   width:35px;
+   height:35px;
+   display: inline-block;
+}
+.container{
+   width: 35px; 
+   height: 35px;
+   display: inline-block;
+   margin-bottom:50px;
+   margin-left:15px;
+   position:absolute;
+   top:50px;
+}
+.index{
+   color:rgb(218, 87, 87);
+   font-size:15px;
+   margin-left:20px;
+   margin-bottom:-15px;
+}
+.swip{
+   height:720px;
+}
+.requery{
+   position:fixed;
+   height:100px;
+   width:200px;
+   border-radius: 15px;
+   border:1px solid black;
+   top:150px;
+   right:40px;
+   z-index:11;
+   background-color: white;
+   z-index:11;
+}
+.title{
+   text-align:center;
+   color:black;
+   font-weight:bold;
+   height:150px;
+   margin-top:5px;
+}
+button{
+   text-align:center;
+   border-width:0px;
+   outline:none;
+   color:black;
+   font-weight:bold;
+   background-color: rgba(228, 225, 225, 0.979);
+   display:inline-block;
+}
+.bar{
+     position:absolute;
+     bottom:0px;
+     width:200px;
+     height:43px;
+     border-bottom-right-radius:15px;
+     border-bottom-left-radius:15px;
+     background:rgba(228, 225, 225, 0.979);
+     padding-bottom:3px;
+}
+.sure{
+   color:blue;
+}
+.mask{
+   width: 100%;
+   height:100%;
+   z-index:10;
+   background-color: #858585b6;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+}
+.form{
+   position:fixed;
+   width:100%;
+   height:50px;
+   bottom: 0px;
+   left: 0;
+}
+image[src="https://s4.ax1x.com/2021/12/15/Tpegq1.png"]{
+   margin-top:4px;
+   width:60px; 
+   height:40px;
+  
+}
+.num{
+   margin-top:1px;
+   margin-right:20px;
+   float:right;
+}
+.choice{
+   border:1px solid lightblue;
+}
+.choose{
+   border:1px solid red;
+}
+.waittime{
+   position:absolute;
+   font-weight: bolder;
+    right:55px;
+    top:60px;
+    font-size:15px;
+    color:blue;
+}
+.distance{
+   position:absolute;
+   font-weight: bolder;
+    right:55px;
+    top:30px;
+    font-size:15px;
+    color:blue;
+}
+.getinfo{
+   float:right;
+   top:-5px;
+   padding:0px 0px 0px 0px;
+   padding-left:0px;
+   padding-right:0px;
+   background-color: white;
+   margin-bottom: 0px;
+   font-size:15px;
+}

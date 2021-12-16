@@ -13,7 +13,19 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : `0${n}`
 }
-
-module.exports = {
-  formatTime
-}
+function waittime(starttime,endtime,number,seating,runningtime){
+       var waittime=parseInt(number/seating)*runningtime+begintime(starttime,endtime)
+       return waittime;
+  }
+  function begintime(starttime,endtime){
+    var stime = Date.parse(new Date(starttime));//获得开始时间的毫秒数
+    var etime = Date.parse(new Date(endtime));//获得结束时间的毫秒数
+    var usedTime = etime - stime;
+    
+    return  Math.floor(usedTime / (60 * 1000));
+  }
+  
+  module.exports = {
+    formatTime,
+    waittime
+  }

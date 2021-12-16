@@ -1,0 +1,9 @@
+<!--pages/map/map.wxml-->
+<view class="map_container">
+  <map id="mapp" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" show-compass="true" show-scale="true" subkey="{{key}}" layer-style="1" markers="{{markers}}" show-location
+  bindcontroltap="controltap" bindmarkertap='bindmarkertap' polygon='{{polygon}}'>
+  <view class="maptools">
+    <cover-image class="location" src="https://s4.ax1x.com/2021/12/12/oqQ3LT.png" bindtap="locationing"></cover-image>
+  </view>
+  </map>
+</view>

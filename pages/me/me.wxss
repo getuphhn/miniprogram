@@ -1,1 +1,49 @@
 /* pages/me/me.wxss */
+.myBlock{
+  margin-left:20px;
+  margin-right:20px;
+}
+.head{
+  border-radius: 50%;
+  width:120rpx;
+  height:120rpx;
+  size:cover;
+}
+.nickName{
+  position:relative;
+  left:50rpx;
+  bottom:50rpx;
+  font-size:larger;
+  font-weight: 200;
+}
+.login{
+  position:absolute;
+  display:inline-block;
+  background-color:white;
+  top:10rpx;
+}
+.myMenus{
+  margin-top:20px;
+  margin-left:23px;
+}
+.myMenu{
+  margin-right:20px;
+  display:inline-block;
+}
+.myMenu image{
+  margin-left:4px;
+  width:90rpx;
+  height:90rpx;
+}
+.myMenu text{
+  display:block;
+  font-size: smaller;
+  font-weight:400;
+}
+.right_arrow{
+  border:solid black;
+  border-width: 0 3px 3px 0;
+  padding:3px;
+  transform:rotate(-45deg);
+  -webkit-transform: retate(-45deg);
+}

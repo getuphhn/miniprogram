@@ -1,0 +1,96 @@
+<!--pages/queueonline/queue.wxml-->
+<wxs src="../../utils/select.wxs" module="tools" />
+<view class="mask" catchtouchmove="stopTouch" style="display:{{isBindExpert}}">
+</view>
+<view>
+   <swiper indicator-dots="false" class="swip">
+      <swiper-item>
+            <view class="index">
+                  可横滑预约单个项目
+            </view>
+           
+            <scroll-view class="scroll" scroll-x="true" style=" white-space: nowrap; display: flex" >
+                  <view class="holder {{tools.indexOf(pretend,1)?'choose':'choice'}}" >
+                        <image src="https://s4.ax1x.com/2021/12/15/TpZsBt.jpg" class="games"></image>
+                        <view class="text">{{project[0].proname}}</view>
+
+                        <view class="distance">距您{{distances[0].distance}}米</view> 
+                        <view class="waittime">需等候{{waittimes[0]}}分钟</view>
+                  </view>
+                  <view class="container" >
+                        <image src="{{tools.indexOf(pretend,1)?img1:img}}" class="book" 
+                        bindtap="{{tools.indexOf(pretend,1)?'quit':'bindbook'}}" data-cancel="{{tools.find(pretend,1)}}" data-index="1"></image>
+                  </view>
+            </scroll-view>
+            <scroll-view  class="scroll " scroll-x="true" style=" white-space: nowrap; display: flex" >
+                  <view class="holder  {{tools.indexOf(pretend,2)?'choose':'choice'}}">
+                        <image src="https://s4.ax1x.com/2021/12/15/TpemDI.jpg" class="games" class="games"></image>
+                        <view class="text">{{project[1].proname}}</view>
+                        <view class="distance">距您{{distances[1].distance}}米</view> 
+                        <view class="waittime">需等候{{waittimes[1]}}分钟</view>
+                  </view>
+                  <view class="container">
+                        <image src="{{tools.indexOf(pretend,2)?img1:img}}" class="book" 
+                        bindtap="{{tools.indexOf(pretend,2)?'quit':'bindbook'}}" data-cancel="{{tools.find(pretend,2)}}" data-index="2"></image>
+                  </view>
+            </scroll-view>
+            <scroll-view class="scroll" scroll-x="true" style=" white-space: nowrap; display: flex" >
+                  <view class="holder  {{tools.indexOf(pretend,3)?'choose':'choice'}}">
+                        <image src="https://s4.ax1x.com/2021/12/15/TpeYKs.jpg" class="games"></image>
+                        <view class="text">{{project[2].proname}}</view>
+                        <view class="distance">距您{{distances[2].distance}}米</view> 
+                        <view class="waittime">需等候{{waittimes[2]}}分钟</view>
+                  </view>
+                  <view class="container">
+                        <image src="{{tools.indexOf(pretend,3)?img1:img}}" class="book" 
+                        bindtap="{{tools.indexOf(pretend,3)?'quit':'bindbook'}}" data-index="3" data-cancel="{{tools.find(pretend,3)}}"></image>
+                  </view>
+            </scroll-view>
+            <scroll-view class="scroll" scroll-x="true" style=" white-space: nowrap; display: flex" >
+                  <view class="holder  {{tools.indexOf(pretend,4)?'choose':'choice'}}">
+                        <image src="https://s4.ax1x.com/2021/12/15/TpeaV0.jpg" class="games"></image>
+                        <view class="text">{{project[3].proname}}</view>
+                        <view class="distance">距您{{distances[3].distance}}米</view> 
+                        <view class="waittime">需等候{{waittimes[3]}}分钟</view>
+                  </view>
+                  <view class="container">
+                        <image src="{{tools.indexOf(pretend,4)?img1:img}}" class="book" 
+                        bindtap="{{tools.indexOf(pretend,4)?'quit':'bindbook'}}" data-index="4" data-cancel="{{tools.find(pretend,4)}}"></image>
+                  </view>
+            </scroll-view>
+            <scroll-view class="scroll" scroll-x="true" style=" white-space: nowrap; display: flex" >
+                  <view class="holder  {{tools.indexOf(pretend,5)?'choose':'choice'}}">
+                        <image src="https://s4.ax1x.com/2021/12/15/Tper24.jpg" class="games"></image>
+                        <view class="text">{{project[4].proname}}</view>
+                        <view class="distance">距您{{distances[4].distance}}米</view> 
+                        <view class="waittime">需等候{{waittimes[4]}}分钟</view>
+                  </view>
+                  <view class="container">
+                        <image src="{{tools.indexOf(pretend,5)?img1:img}}" class="book" 
+                        bindtap="{{tools.indexOf(pretend,5)?'quit':'bindbook'}}" data-index="5" data-cancel="{{tools.find(pretend,5)}}"></image>
+                  </view>
+            </scroll-view>
+            <view class="end">
+                  更多精彩内容敬请期待
+            </view>
+      </swiper-item>
+      <swiper-item>
+            <view class="index">
+                  可横滑预约单个项目
+            </view>
+      </swiper-item>
+   </swiper>
+   <view class="form" style="background-color: {{num!=0?background:'rgba(129, 127, 127, 0.979)'}};">
+                  <view class="num" wx:if="{{num!=0}}">{{num}}</view>
+                  <image src="https://s4.ax1x.com/2021/12/15/Tpegq1.png"></image>
+                   <button style="background-color:  {{num!=0?background:'rgba(129, 127, 127, 0.979)'}};">生成预约行程</button> 
+   </view>
+   <view class="requery" style=" display:{{isBindExpert}}">
+      <view class="title">
+            确定预约该项目吗？
+      </view>
+      <view class="bar">  
+            <button style="width:90px; height: 40px" bindtap="cancel">取消</button> <button bindtap="add" data-index="100" class="sure" style="width:90px; height:40px">确定</button>
+      </view>
+   </view>     
+</view>

@@ -1,0 +1,43 @@
+<!--pages/childpagesofme/myteam.wxml-->
+<view class="main">
+  <view class="header">
+    <view class="search2">
+      <image src="https://s4.ax1x.com/2021/12/13/oXgSw6.png"></image>
+      <input type="text" class="search" placeholder="搜索" />
+    </view>
+    <view class="quit"><button class="search1" size="mini">取消</button></view>
+  </view>
+  <view class="container">
+  </view>
+  <!--  规则提示  -->
+  <view class="ruleZhezhao {{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+    <view class='ruleZhezhaoContent'>
+      <image src='https://s4.ax1x.com/2021/12/14/oxtiin.png' class='ruleHide' bindtap='hideRule'></image>
+      <view class="innercontent">
+        <form bindsubmit="submit">
+          <view class="teamname"> 队伍名称:<input type="text" class="input" name="teamname" /></view>
+          <view class="teamnumber">成员上限:<input type="text" class="input" name="teamnumber" /></view>
+          <view class="teamlabel"> 队伍标签:<input type="text" class="input" name="teamlabel" /></view>
+          <view>
+
+            <view class="list">家人</view>
+            <view class="list">朋友</view>
+            <view class="list">同事</view>
+            <view class="submit"><button form-type="submit" style="width:100%;height:30px;">提交</button></view>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view>
+  <!--  end  -->
+
+
+  <view class="footer">
+    <view class="formgroup">
+      <image src="https://s4.ax1x.com/2021/12/14/ovAbBF.png"></image><text bindtap="showRule">发起组队</text>
+    </view>
+    <view class="addgroup">
+      <image src="https://s4.ax1x.com/2021/12/14/ovATXT.png"></image><text bindtap="addgroup">加入队伍</text>
+    </view>
+  </view>
+</view>

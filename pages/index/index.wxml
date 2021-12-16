@@ -1,10 +1,26 @@
 <!--index.wxml-->
-<view class="container">
-  <swiper class="back">
-      <block wx:for="{{movies}}" wx:for-index="index">
-        <swipter-item>
-          <image src="{{item}}" class="slide-image" mode="aspectFill"/>
-        </swipter-item>
-      </block>
-  </swiper>
+<view class="container" style="background-image:url(https://s4.ax1x.com/2021/12/06/oyV1tU.jpg)">
+  <view class="message">
+    您预约的项目xxx还有x分钟开始---  
+    您当前距该项目还有{{distances[1].distance}}米，步行约{{distances[1].walktime}}分钟
+  </view>
+  <view class="func">
+    <button class="btn2" style="width:63px;">
+      <image src="https://s4.ax1x.com/2021/12/06/oyeIyj.png" class="btn-img2"></image>
+      <text>在线购票</text>
+    </button>
+    <button class="btn2" style="width:63px;">
+      <image src="https://s4.ax1x.com/2021/12/06/oye4Sg.png" class="btn-img2"></image>
+      <text>在线商城</text>
+    </button>
+    <button class="btn2" style="width:63px;">
+      <image src="https://s4.ax1x.com/2021/12/06/oyeoOs.png" class="btn-img2"></image>
+      <text>活动时间</text>
+    </button>
+    <button class="btn2" style="width:63px;">
+      <image src="https://s4.ax1x.com/2021/12/06/oyeRFf.png" class="btn-img2"></image>
+      <text>推荐路线</text>
+    </button>
+    <button class="btn1" bindtap="queue">在线排队</button>
+  </view>
 </view>

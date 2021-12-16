@@ -1,0 +1,18 @@
+function indexOf(arr, value) {
+  if (arr.indexOf(value) < 0) {
+     
+      return false;
+  } else {
+      return true;
+  }
+};
+function find(arr,value){
+   for(var i=0;i<arr.length;i++){
+        if(arr[i]===value){
+            return i;
+        }
+   }
+};
+
+module.exports.indexOf = indexOf;
+module.exports.find = find;
