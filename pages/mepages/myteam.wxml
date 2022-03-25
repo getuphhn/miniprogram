@@ -1,13 +1,39 @@
 <!--pages/childpagesofme/myteam.wxml-->
+<wxs src="../../utils/select.wxs" module="tools" />
 <view class="main">
   <view class="header">
+    <form bindsubmit="search">
     <view class="search2">
-      <image src="https://s4.ax1x.com/2021/12/13/oXgSw6.png"></image>
-      <input type="text" class="search" placeholder="搜索" />
+   
+      <button class="search1 button" style="width:30%" formType="submit">
+        <image src="https://s4.ax1x.com/2021/12/13/oXgSw6.png"></image>
+      </button>  
+          <input type="text" class="search" name="nickname" placeholder="输入昵称搜索" value="{{Inputemp}}"/>
     </view>
-    <view class="quit"><button class="search1" size="mini">取消</button></view>
+    <view class="quit"><button class="search1" bindtap="cancelsearch"><view>取消</view></button></view>
+  </form>
   </view>
   <view class="container">
+       <view class="team" wx:if="{{team.length>1&&search.length==0}}">
+              <text class="member">队伍名称</text><text class="member">{{groupname}}</text>
+                <checkbox-group>
+                      <view class="group" wx:for="{{team}}" wx:key='*this' data-index="{{index}}">
+                        <text class="groupmate">{{item.matename}}</text><text class="groupid">{{item.id}}</text> <checkbox value="{{item.id}}"  checked="{{item.id}}"></checkbox>
+                      </view> 
+                </checkbox-group>
+              
+       </view>
+       <view wx:if="{{userlist.length>=1&&search.length!=0}}" class="searchresult">
+            <view>
+                    <text class="member">检索到以下游客</text>
+            </view>
+            <view class="mate">
+                    <view class="group" wx:for="{{userlist}}" wx:key='*this' wx:for-index="idex"> 
+                          <text class="groupresult">{{item.nickname}}</text>
+                          <button data-index='{{idex}}' style="width:{{tools.indexOf(sendmember,idex)?'60px':'40px'}}" class="{{tools.indexOf(sendmember,idex)?'send':'notsend'}}" bindtap="{{tools.indexOf(sendmember,idex)?'':'addmember'}}">{{tools.indexOf(sendmember,idex)?"已发送":"添加"}}</button>
+                    </view>
+            </view>
+      </view>
   </view>
   <!--  规则提示  -->
   <view class="ruleZhezhao {{isRuleTrue?'isRuleShow':'isRuleHide'}}">

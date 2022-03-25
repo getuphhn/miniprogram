@@ -1,0 +1,8 @@
+{  
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "消息管理",
+  "navigationBarTextStyle": "black",
+  "component": true,
+  "usingComponents": {}
+}

@@ -11,23 +11,43 @@
       <image class="head" src="{{userInfo.headimg}}" bindtap="modInfo"></image>
       <text class="nickName">{{userInfo.nickname}}</text>
     </view>
-    <view class="myMenus">
-      <view class="myMenu">
-        <image src="https://s4.ax1x.com/2021/12/06/oyecwt.png" bindtap="myorder"></image>
-        <text>我的订单</text>
-      </view>
-      <view class="myMenu">
-        <image src="https://s4.ax1x.com/2021/12/06/oye5lQ.png" bindtap="myteam"></image>
-        <text>队伍管理</text>
-      </view>
-      <view class="myMenu" bindtap="getRight">
-        <image src="https://s4.ax1x.com/2021/12/06/oyeffS.png"></image>
-        <text>权益中心</text>
-      </view>
-      <view class="myMenu">
-        <image src="https://s4.ax1x.com/2021/12/06/oyeWY8.png"></image>
-        <text>消息管理</text>
-      </view>
+  </view>
+  <view class="myMenus">
+    <view class="myMenu">
+      <image src="https://s4.ax1x.com/2021/12/06/oyecwt.png" bindtap="myorder"></image>
+      <text>我的订单</text>
     </view>
+    <view class="myMenu">
+      <image src="https://s4.ax1x.com/2021/12/06/oye5lQ.png" bindtap="myteam"></image>
+      <text>队伍管理</text>
+    </view>
+    <view class="myMenu" bindtap="getRight">
+      <image src="https://s4.ax1x.com/2021/12/06/oyeffS.png"></image>
+      <text>权益中心</text>
+    </view>
+    <view class="myMenu" bindtap="getNews">
+      <image src="https://s4.ax1x.com/2021/12/06/oyeWY8.png"></image>
+      <text>消息管理</text>
+    </view>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view bindtap="person">个人设置</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>隐私条款</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>关于我们</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
   </view>
 </view>

@@ -16,6 +16,11 @@ Page({
       userInfo: user
     })
   },
+  person:function(){
+    wx.navigateTo({
+      url: '../person/person',
+    })
+  },
   login() {
     wx.getUserProfile({
       desc: '获取用户基本信息',
@@ -65,6 +70,12 @@ Page({
       url: 'right',
     })
   },
+getNews(){
+  wx.navigateTo({
+    url: 'news',
+  })
+},
+
   logout() {
     this.setData({
       userInfo: ''

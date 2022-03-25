@@ -1,0 +1,255 @@
+<view class="container">
+     <view style="height:600px; width:100%" class="content">
+          <swiper class="pic" autoplay="true" interval="4000" duration="500" circular="true">
+               <swiper-item wx:for="{{images}}" wx:key="*this">
+                    <view>
+                         <image src="{{item}}"></image>
+                    </view>
+               </swiper-item>
+          </swiper>
+     </view>
+     <view class="showprice">
+          <view class="topTabSwiper">
+               <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>全天票</view>
+               <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>年卡</view>
+          </view>
+          <swiper current="{{currentData}}" class='swiper' bindchange="bindchange">
+               <swiper-item>
+                    <view class='swiper_con'>
+                         <text class="remind">Pick one day to enjoy yourself</text>
+                         <view class="date">
+                              <block wx:for="{{showdate}}" wx:for-index="index" wx:key="*this">
+                                   <view class="day  {{choose_date == showdate[index]? 'selected':''}}" bindtap="choose_date" data-date="{{showdate[index]}}">
+                                        <text>{{showdate[index]}}</text>
+                                        <view style="font-weight:bold">￥{{prices[0]}}</view>
+                                   </view>
+                              </block>
+                              <view>
+                                   <text class="moredate" bindtap="moredate">更多日期</text>
+                              </view>
+                         </view>
+                         <view class="desc5">
+                              <view class="showtickets">
+                                   <view>
+                                        <image src='https://s4.ax1x.com/2022/02/04/He5yo8.png' style="width:40px;height:40px;float:left"></image>
+                                        <text class="desc1">{{ticketskind[0]}}</text>
+                                   </view>
+                              </view>
+                              <view class="content">
+                                   <view class="desc"> 实时交友 </view>
+                                   <view class="desc"> 在线排队 </view>
+                                   <view class="desc"> 路线推荐 </view>
+                                   <view class="function">
+                                        ￥{{prices[0]}}
+                                   </view>
+                                   <view class="num">
+                                        <view class="desc2">
+                                             <image src='https://s4.ax1x.com/2022/02/04/HeTjyj.png' style="width:20px;height:20px;float:right;margin-top:13px;" bindtap="add" data-index='0'></image>
+                                        </view>
+                                        <view class="desc2 desc6" style="float:right">{{num[0]}}</view>
+                                        <view class="desc2">
+                                             <image src='https://s4.ax1x.com/2022/02/04/HeTfQH.png' style="width:18px;height:18px;float:right;margin-top:1px;" bindtap="reduce" data-index='0'></image>
+                                        </view>
+                                   </view>
+                              </view>
+                         </view>
+                         <view class="desc4">
+                              <view class="showtickets">
+                                   <view>
+                                        <image src='https://s4.ax1x.com/2022/02/04/He5yo8.png' style="width:40px;height:40px;float:left"></image>
+                                        <text class="desc1">{{ticketskind[1]}}</text>
+                                   </view>
+                              </view>
+                              <view class="content">
+                                   <view class="desc"> 实时交友 </view>
+                                   <view class="desc"> 在线排队 </view>
+                                   <view class="desc"> 路线推荐 </view>
+                                   <view class="function">
+                                        ￥{{prices[1]}}
+                                   </view>
+                                   <view class="num">
+                                        <view class="desc2">
+                                             <image src='https://s4.ax1x.com/2022/02/04/HeTjyj.png' style="width:20px;height:20px;float:right;margin-top:13px;" bindtap="add" data-index='1'></image>
+                                        </view>
+                                        <view class="desc2 desc6" style="float:right">{{num[1]}}</view>
+                                        <view class="desc2">
+                                             <image src='https://s4.ax1x.com/2022/02/04/HeTfQH.png' style="width:18px;height:18px;float:right;margin-top:1px;" bindtap="reduce" data-index='1'></image>
+                                        </view>
+                                   </view>
+                              </view>
+                         </view>
+                         <view class="desc3">
+                              <view class="showtickets">
+                                   <view>
+                                        <image src='https://s4.ax1x.com/2022/02/04/He5yo8.png' style="width:40px;height:40px;float:left"></image>
+                                        <text class="desc1">{{ticketskind[2]}}</text>
+                                   </view>
+                              </view>
+                              <view class="content">
+                                   <view class="desc"> 实时交友 </view>
+                                   <view class="desc"> 在线排队 </view>
+                                   <view class="desc"> 路线推荐 </view>
+                                   <view class="function">
+                                        ￥{{prices[2]}}
+                                   </view>
+                                   <view class="num">
+                                        <view class="desc2">
+                                             <image src='https://s4.ax1x.com/2022/02/04/HeTjyj.png' style="width:20px;height:20px;float:right;margin-top:13px;" bindtap="add" data-index='2'></image>
+                                        </view>
+                                        <view class="desc2 desc6" style="float:right">{{num[2]}}</view>
+                                        <view class="desc2">
+                                             <image src='https://s4.ax1x.com/2022/02/04/HeTfQH.png' style="width:18px;height:18px;float:right;margin-top:1px;" bindtap="reduce" data-index='2'></image>
+                                        </view>
+                                   </view>
+                              </view>
+                         </view>
+                    </view>
+               </swiper-item>
+               <swiper-item style="height:480px">
+                    <view class='swiper_con'>
+                         <text class="remind" style="margin-left:90px">Reward yourself this year </text>
+                         <view class="desc5" style="bottom:380px">
+                              <view class="showtickets">
+                                   <view>
+                                        <image src='https://s4.ax1x.com/2022/02/04/He5yo8.png' style="width:40px;height:40px;float:left"></image>
+                                        <text class="desc1">{{ticketskind[3]}}</text>
+                                   </view>
+                              </view>
+                              <view class="content">
+                                   <view class="desc"> 实时交友 </view>
+                                   <view class="desc"> 在线排队 </view>
+                                   <view class="desc"> 路线推荐 </view>
+                                   <view class="function">
+                                        ￥{{prices[3]}}
+                                   </view>
+                                   <view class="num">
+                                        <view class="desc2">
+                                             <image src='https://s4.ax1x.com/2022/02/04/HeTjyj.png' style="width:20px;height:20px;float:right;margin-top:13px;" bindtap="add" data-index='3'></image>
+                                        </view>
+                                        <view class="desc2 desc6" style="float:right ">{{num[3]}}</view>
+                                        <view class="desc2">
+                                             <image src='https://s4.ax1x.com/2022/02/04/HeTfQH.png' style="width:18px;height:18px;float:right;margin-top:1px;" bindtap="reduce"  data-index='3'></image>
+                                        </view>
+                                   </view>
+                              </view>
+                         </view>
+                         <view class="desc4" style="bottom:250px">
+                              <view class="showtickets">
+                                   <view>
+                                        <image src='https://s4.ax1x.com/2022/02/04/He5yo8.png' style="width:40px;height:40px;float:left"></image>
+                                        <text class="desc1">{{ticketskind[4]}}</text>
+                                   </view>
+                              </view>
+                              <view class="content">
+                                   <view class="desc"> 实时交友 </view>
+                                   <view class="desc"> 在线排队 </view>
+                                   <view class="desc"> 路线推荐 </view>
+                                   <view class="function">
+                                        ￥{{prices[4]}}
+                                   </view>
+                                   <view class="num">
+                                        <view class="desc2">
+                                             <image src='https://s4.ax1x.com/2022/02/04/HeTjyj.png' style="width:20px;height:20px;float:right;margin-top:13px;" bindtap="add" data-index='4'></image>
+                                        </view>
+                                        <view class="desc2 desc6" style="float:right">{{num[4]}}</view>
+                                        <view class="desc2">
+                                             <image src='https://s4.ax1x.com/2022/02/04/HeTfQH.png' style="width:18px;height:18px;float:right;margin-top:1px;" bindtap="reduce"  data-index='4'></image>
+                                        </view>
+                                   </view>
+                              </view>
+                         </view>
+                         <view class="desc3" style="bottom:120px">
+                              <view class="showtickets">
+                                   <view>
+                                        <image src='https://s4.ax1x.com/2022/02/04/He5yo8.png' style="width:40px;height:40px;float:left"></image>
+                                        <text class="desc1">{{ticketskind[5]}}</text>
+                                   </view>
+                              </view>
+                              <view class="content">
+                                   <view class="desc"> 实时交友 </view>
+                                   <view class="desc"> 在线排队 </view>
+                                   <view class="desc"> 路线推荐 </view>
+                                   <view class="function">
+                                        ￥{{prices[5]}}
+                                   </view>
+                                   <view class="num">
+                                        <view class="desc2">
+                                             <image src='https://s4.ax1x.com/2022/02/04/HeTjyj.png' style="width:20px;height:20px;float:right;margin-top:13px;" bindtap="add" data-index='5'></image>
+                                        </view>
+                                        <view class="desc2  desc6" style="float:right">{{num[5]}}</view>
+                                        <view class="desc2">
+                                             <image src='https://s4.ax1x.com/2022/02/04/HeTfQH.png' style="width:18px;height:18px;float:right;margin-top:1px;" bindtap="reduce"  data-index='5'></image>
+                                        </view>
+                                   </view>
+                              </view>
+                         </view>
+                    </view>
+               </swiper-item>
+          </swiper>
+     </view>
+     <view class="bottom">
+          <view class="images">
+               <image bindtap="checkbuckets" src="{{num[0]+num[1]+num[2]==0? 'https://s4.ax1x.com/2022/02/03/HZSJeg.png':'https://s4.ax1x.com/2022/02/09/HGrTbR.png'}}" style="width:35px;height:30px"></image>
+               <text style="display:block;font-size:10px">购物车</text>
+          </view>
+          <view class="images sure {{num[0]+num[1]+num[2]==0?'':'pay'}}" bindtap="getInfo">
+               <text style="display:inline-block">去结算</text>
+          </view>
+          <view class="count ">
+               <text style="display:inline-block">合计￥{{money_count}}</text>
+          </view>
+     </view>
+</view>
+<view class="canlendarBgView" style="display:{{condition}}">
+     <view class="canlendarView">
+          <view class="canlendarTopView">
+               <view class="leftBgView" bindtap="handleCalendar" data-handle="prev">
+                    <view class="leftView">《</view>
+               </view>
+               <view class="centerView">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+               <view class="rightBgView" bindtap="handleCalendar" data-handle="next">
+                    <view class="rightView">》</view>
+               </view>
+          </view>
+          <view class="weekBgView">
+               <view class="weekView" wx:for="{{weeks_ch}}" wx:key="*this" data-idx="{{index}}">{{item}}</view>
+          </view>
+          <view class="dateBgView">
+               <view wx:if="{{hasEmptyGrid}}" class="dateEmptyView" wx:for="{{empytGrids}}" wx:key="*this" data-idx="{{index}}">
+               </view>
+               <view class="dateView" wx:for="{{days}}" wx:key="*this" data-idx="{{index}}" bindtap="dateSelectAction">
+                    <view class="{{(index<now_date[2]&&cur_year==now_date[0]&&cur_month==now_date[1])||cur_year<now_date[0]||(cur_year==now_date[0]&&cur_month<now_date[1])? 'datesbefore':'datesView'}} {{index == todayIndex ? 'dateSelectView' : ''}}">{{item}}</view>
+               </view>
+          </view>
+     </view>
+     <view bindtap="selectdate" class="choose_date">确定</view>
+</view>
+<view wx:if="{{showbuckets=='true'}}" class="buckets">
+     <view>
+          <text class="buckets_head">已选商品</text>
+          <view wx:for='{{goods}}' wx:key='*this' class='buckets_content'>
+               <view>
+                    <view class="showtickets">
+                         <view>
+                              <image src='https://s4.ax1x.com/2022/02/04/He5yo8.png' style="width:40px;height:40px;float:left"></image>
+                              <text class="desc1">{{item.name}}</text>
+                         </view>
+                    </view>
+                    <view class="content">
+                         <view class="desc"> 实时交友 </view>
+                         <view class="desc"> 在线排队 </view>
+                         <view class="desc"> 路线推荐 </view>
+                         <view class="function" style="bottom:2px">
+                              ￥{{item.price}}
+                         </view>
+                         <view class="num">
+                              <!-- <view class="desc2"><image src='https://s4.ax1x.com/2022/02/04/HeTjyj.png' style="width:20px;height:20px;float:right;margin-top:13px;" bindtap="add" data-index='1'></image></view>-->
+                              <view class="desc2" style="float:right">数量:{{item.number}}</view>
+                              <!--<view class="desc2" ><image src='https://s4.ax1x.com/2022/02/04/HeTfQH.png' style="width:18px;height:18px;float:right;margin-top:1px;" bindtap="reduce" data-index='1'></image></view>-->
+                         </view>
+                    </view>
+               </view>
+          </view>
+          <view bindtap='backpage' class='backpage'>返回</view>
+     </view>
+</view>

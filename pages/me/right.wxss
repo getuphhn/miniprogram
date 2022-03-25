@@ -1,1 +1,47 @@
-/* pages/me/right.wxss */
+
+
+
+.levelbox {
+    height: 180px;
+    border-radius: 10px;
+}
+
+.lv1 {
+    background-color: rgba(127, 195, 235, 0.432);
+}
+
+.lv2 {
+    background-color: rgba(250, 217, 109, 0.651);
+}
+
+.lv3 {
+    background-color: rgba(104, 128, 151, 0.651);
+}
+
+.leveltext {
+    position: relative;
+    display: block;
+    color: white;
+    top: 20rpx;
+    left: 40rpx;
+    font-size: 20px;
+}
+
+.rights {
+    position: relative;
+    line-height: 40rpx;
+    left: 40rpx;
+    top: 20%;
+    color: rgb(255, 255, 255);
+}
+
+.lvalue {
+    margin:40rpx 40rpx;
+    color: white;
+    font-size: 16px;
+}
+.levelbox image{
+    position:absolute;
+    top:5%;
+    left:65%;
+}

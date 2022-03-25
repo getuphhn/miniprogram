@@ -1,9 +1,33 @@
 <!--pages/map/map.wxml-->
 <view class="map_container">
-  <map id="mapp" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" show-compass="true" show-scale="true" subkey="{{key}}" layer-style="1" markers="{{markers}}" show-location
-  bindcontroltap="controltap" bindmarkertap='bindmarkertap' polygon='{{polygon}}'>
-  <view class="maptools">
-    <cover-image class="location" src="https://s4.ax1x.com/2021/12/12/oqQ3LT.png" bindtap="locationing"></cover-image>
-  </view>
-  </map>
+    <scroll-view scroll-x class="bg-green nav text-center">
+        <view class="cu-item {{0==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="0">
+            <text class="cuIcon-locationfill"></text> 娱乐设施
+        </view>
+        <view class="cu-item {{1==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="1">
+            <text class="cuIcon-shopfill"></text> 购物
+        </view>
+        <view class="cu-item {{2==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="2">
+            <text class="cuIcon-goodsfill"></text> 美食
+        </view>
+        <view class="cu-item {{3==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="3">
+            <text class="cuIcon-icon"></text> 卫生间
+        </view>
+    </scroll-view>
+    <map class="mapp" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" polyline="{{polyline}}" show-compass="true" show-scale="true" subkey="{{key}}" layer-style="1" markers="{{markers}}" show-location bindcontroltap="controltap" bindmarkertap='bindmarkertap' data-target="bottomModal">
+        <view class="maptools">
+            <cover-image class="location" src="https://s4.ax1x.com/2021/12/12/oqQ3LT.png" bindtap="locationing"></cover-image>
+        </view>
+    </map>
+    <view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
+        <view class="cu-dialog">
+            <view class="cu-bar bg-white">
+                <view class="action text-green" bindtap="navigate">导航</view>
+                <view class="action text-blue" bindtap="hideModal">取消</view>
+            </view>
+            <view class="padding-xl">
+                <text>距离目的地{{distance}}米</text>
+            </view>
+        </view>
+    </view>
 </view>

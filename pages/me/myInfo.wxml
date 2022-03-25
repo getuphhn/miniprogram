@@ -19,8 +19,8 @@
           <text>性别</text>
           <view class="genderbox">
             <radio-group name="gender">
-              <radio color="#fff" value="男" checked="{{male}}">男</radio>
-              <radio color="#fff" value="女" checked="{{female}}">女</radio>
+              <radio color="#fff" value="男" checked="{{male}}"></radio>男
+              <radio color="#fff" value="女" checked="{{female}}"></radio>女
             </radio-group>
           </view>
           <view class="line"></view>

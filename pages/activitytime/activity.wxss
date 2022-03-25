@@ -1,0 +1,76 @@
+.date {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 3em;
+  align-items: center;
+}
+
+.direction {
+  width: 40rpx;
+  margin: 15rpx;
+  height: 40rpx;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background: #5DD79C;
+  color: #fff
+}
+
+.weeks-item-text {
+  width: 100%;
+  line-height: 2em;
+  font-size: 40rpx;
+  text-align: center;
+  border-left: 1px solid #ececec;
+  
+}
+
+.body-days {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.days-item {
+  width: 14.285%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.days-item-text {
+  width: 120rpx;
+  padding: 26rpx;
+  font-size: 26rpx;
+  /* border-radius: 50%; */
+  border: 1rpx solid #ececec;
+  /* margin-top: 34rpx;
+  margin-bottom: 34rpx; */
+  color: #000;
+}
+.days-item-text-hover{
+  background-color: aquamarine;
+}
+
+
+/* 选中状态 */
+.days-item-selected{
+  background: #5DD79C;
+}
+.have_activities{
+  width: 40rpx;
+  margin: 0rpx;
+  height: 35rpx;
+}
+.show_activity{
+  background-color: #5DD79C;
+  margin-top: 10rpx;
+}
+.show_activity{
+  background-color: #5DD79C;
+  margin-top: 10rpx;
+}

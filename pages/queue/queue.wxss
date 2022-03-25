@@ -10,7 +10,7 @@
    
    border-radius: 15px;
    width:90%;
-   margin-left:15px;
+  /* margin-left:15px;     原值为15px*/
    margin-top:30px;
    height:80px;
    position:relative;
@@ -58,7 +58,7 @@ image[src="../../image/play05.jpeg"]+view{
    margin-bottom:-15px;
 }
 .swip{
-   height:720px;
+   height:690px;
 }
 .requery{
    position:fixed;
@@ -70,7 +70,7 @@ image[src="../../image/play05.jpeg"]+view{
    right:40px;
    z-index:11;
    background-color: white;
-   z-index:11;
+   
 }
 .title{
    text-align:center;

@@ -8,20 +8,29 @@ page{
   background-size: 100% 100%;
 }
 .message{
-  position:absolute;
-  top:120px;
+  position:relative;
+  top:15%;
   width:80%;
-  height:50px;
+  height:25%;
   border-radius: 10px;
   background-color:white;
 }
+.message text{
+  display:inline-block;
+  margin:20rpx 10rpx 0 10rpx;
+}
 .func{
-  position:absolute;
-  top:200px;
+  position:relative;
+  top:-100px;
   width:80%;
-  height:150px;
+  height:28%;
   border-radius: 10px;
   background-color:white;
+}
+.sfunc{
+  position:relative;
+  left:5%;
+  width:90%;
 }
 .func text{
   display:block;
@@ -33,7 +42,7 @@ page{
   color:white;
 }
 .btn2{
-  margin:20px;
+  margin:40rpx;
   padding:0;
   display:inline-block;
   background-color: white;
@@ -42,5 +51,22 @@ page{
   size:100%;
   width:25px;
   height:25px;
+}
+.audio{
+  z-index:27;
+  position:fixed;
+  top:0px;
+  left:0px;
+  float:left;
+}
+.play{
+  height:auto;
+  width:auto;
+  text-align: center;
+  color:black;
+  position:fixed;
+  top:240px;
+  left:100px;
+  z-index:27;
 }
 

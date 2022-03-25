@@ -1,2 +1,73 @@
-<!--pages/me/right.wxml-->
-<text>pages/me/right.wxml</text>
+<swiper class="card-swiper" duration="500" bindchange="cardSwiper">
+    <swiper-item>
+        <view class="swiper-item">
+            <view class="levelbox lv1">
+                <view class="leveltext">初级会员</view>
+                <view wx:if="{{level==1}}">
+                    <image src="https://s4.ax1x.com/2022/02/24/bFOHVe.png" style="width:200rpx;height:80rpx"></image>
+                </view>
+                <view class="lvalue">成长值 {{leveldata}}/1000</view>
+                <view class="rights">
+                    <view>可取消排队次数 1</view>
+                    <view>可同时排队个数 1</view>
+                </view>
+            </view>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="swiper-item">
+            <view class="levelbox lv2">
+                <view class="leveltext">中级会员</view>
+                <view wx:if="{{level==2}}">
+                    <image src="https://s4.ax1x.com/2022/02/24/bFOHVe.png" style="width:200rpx;height:80rpx"></image>
+                </view>
+                <view class="lvalue">成长值 {{leveldata}}/5000</view>
+                <view class="rights">
+                    <view>可取消排队次数 2</view>
+                    <view>可同时排队个数 1</view>
+                </view>
+            </view>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class="swiper-item">
+            <view class="levelbox lv3">
+                <view class="leveltext">高级会员</view>
+                <view wx:if="{{level==3}}">
+                    <image src="https://s4.ax1x.com/2022/02/24/bFOHVe.png" style="width:200rpx;height:80rpx"></image>
+                </view>
+                <view class="lvalue">成长值 {{leveldata}}/10000</view>
+                <view class="rights">
+                    <view>可取消排队次数 3</view>
+                    <view>可同时排队个数 2</view>
+                </view>
+            </view>
+        </view>
+    </swiper-item>
+</swiper>
+<view class="cu-timeline">
+  <view class="cu-time">昨天</view>
+  <view class="cu-item cur cuIcon-noticefill">
+    <view class="content bg-green shadow-blur">
+      <text>22:22</text> 评价，成长值+1000
+    </view>
+  </view>
+  <view class="cu-item text-red cuIcon-attentionforbidfill">
+    <view class="content bg-red shadow-blur">
+      购买商城物品，成长值+500
+    </view>
+  </view>
+  <view class="cu-item text-grey cuIcon-evaluate_fill">
+    <view class="content bg-grey shadow-blur">
+      购买门票，成长值+1000
+    </view>
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-blue content">
+      <text>20:00</text> 补全身份信息，成长值+500
+    </view>
+    <view class="bg-cyan content">
+      <text>10:00</text> 绑定手机号，成长值+200
+    </view>
+  </view>
+</view>

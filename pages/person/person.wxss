@@ -1,0 +1,26 @@
+/* pages/person/person.wxss */
+.content{
+  background-color: gray;
+  border-bottom: 1px solid white;
+}
+.text{
+  font-size:20px;
+  font-weight: bold;
+}
+.notes{
+  font-size:15px;
+  margin-left:5px;
+}
+.group{
+  font-size:15px;
+  margin-top:10px;
+}
+.group view{
+  width:100px;
+  margin-top:5px;
+}
+.choice1{
+  margin-left:5px;
+  margin-right:5px;
+
+}

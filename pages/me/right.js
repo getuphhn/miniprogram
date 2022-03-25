@@ -1,18 +1,19 @@
-// pages/me/right.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        cardCur: 0,
+        level: 0,
+        leveldata: 0
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.getLevel()
     },
 
     /**
@@ -62,5 +63,31 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+    // cardSwiper
+    cardSwiper(e) {
+        this.setData({
+            cardCur: e.detail.current
+        })
+    },
+    //获取用户等级和成长值
+    getLevel() {
+        wx.request({
+            url: 'http://localhost:8080/OlineLine/info',
+            method: 'GET',
+            data:{
+                openid:wx.getStorageSync('openid')
+            },
+            header: {
+                'content-type': 'application/x-www-form-urlencoded'
+            },
+            success:res=>{
+                this.setData({
+                    level:res.data.user.level,
+                    leveldata:res.data.user.leveldata
+                })
+            }
+        })
     }
 })
+

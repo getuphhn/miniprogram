@@ -50,7 +50,7 @@
     bottom: 0;
     background: #efefef;
     border-top: 1px solid #ddd;
-    padding: 10px 0;
+    padding: -10px 0;
 }
 
 .btn_submit {

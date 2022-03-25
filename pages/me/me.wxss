@@ -1,49 +1,56 @@
 /* pages/me/me.wxss */
-.myBlock{
-  margin-left:20px;
-  margin-right:20px;
+@import "../../weui.wxss";
+.myBlock {
+  margin-left: 5%;
+  margin-right: 50rpx;
 }
-.head{
+
+.head {
   border-radius: 50%;
-  width:120rpx;
-  height:120rpx;
-  size:cover;
+  width: 120rpx;
+  height: 120rpx;
+  size: cover;
 }
-.nickName{
-  position:relative;
-  left:50rpx;
-  bottom:50rpx;
-  font-size:larger;
+
+.nickName {
+  position: relative;
+  left: 50rpx;
+  bottom: 50rpx;
+  font-size: larger;
   font-weight: 200;
 }
-.login{
-  position:absolute;
-  display:inline-block;
-  background-color:white;
-  top:10rpx;
+
+.login {
+  position: absolute;
+  display: inline-block;
+  background-color: white;
+  top: 10rpx;
 }
-.myMenus{
-  margin-top:20px;
-  margin-left:23px;
+
+.myMenus {
+  margin:40rpx 0;
 }
-.myMenu{
-  margin-right:20px;
-  display:inline-block;
+
+.myMenu {
+  display: inline-flex;
+  align-items: center;
+  /**子view垂直居中*/
+  vertical-align: center;
+  /**垂直居中*/
+  justify-content: center;
+  /**内容居中*/
+  flex-direction: column;
+  /**内容排列方式*/
+  width:25%;
 }
-.myMenu image{
-  margin-left:4px;
-  width:90rpx;
-  height:90rpx;
+
+.myMenu image {
+  width: 90rpx;
+  height: 90rpx;
 }
-.myMenu text{
-  display:block;
+
+.myMenu text {
   font-size: smaller;
-  font-weight:400;
-}
-.right_arrow{
-  border:solid black;
-  border-width: 0 3px 3px 0;
-  padding:3px;
-  transform:rotate(-45deg);
-  -webkit-transform: retate(-45deg);
+  margin:5px;
+  font-weight: 400;
 }

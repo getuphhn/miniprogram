@@ -9,7 +9,7 @@
   <!-- 完成 -->
   <swiper-item>
     <scroll-view class="hot-box" scroll-y="true">
-      <view  class="orderDetails" wx:for="{{alreadyOrder}}" wx:key=" ">
+      <view  class="orderDetails" wx:for="{{alreadyOrder}}" wx:key="*this">
         <view class="orderListTitle">
           <text class="userName">{{item.name}}</text>
           <text class="orderStatus">{{item.state}}</text>
@@ -34,7 +34,7 @@
   <!-- 待付款 -->
   <swiper-item>
     <scroll-view class="hot-box" scroll-y="true">
-      <view class="orderDetails" wx:for="{{waitPayOrder}}" wx:key=" ">
+      <view class="orderDetails" wx:for="{{waitPayOrder}}" wx:key="*this">
         <view class="orderListTitle">
            <text class="userName">{{item.name}}</text>
           <text class="orderStatus">{{item.state}}</text>
@@ -59,7 +59,7 @@
   <!-- 取消 -->
   <swiper-item>
     <scroll-view class="hot-box" scroll-y="true">
-      <view class="orderDetails" wx:for="{{lostOrder}}" wx:key=" ">
+      <view class="orderDetails" wx:for="{{lostOrder}}" wx:key="*this">
         <view class="orderListTitle">
          <text class="userName">{{item.name}}</text>
           <text class="orderStatus">{{item.state}}</text>

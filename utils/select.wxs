@@ -6,13 +6,14 @@ function indexOf(arr, value) {
       return true;
   }
 };
-function find(arr,value){
+function findplayer(arr,value){
    for(var i=0;i<arr.length;i++){
-        if(arr[i]===value){
-            return i;
-        }
+       if(arr[i].id==value)
+           return true;
    }
+   return false;
 };
-
 module.exports.indexOf = indexOf;
-module.exports.find = find;
+module.exports.findplayer= findplayer;
+
+

@@ -1,0 +1,27 @@
+<view>
+     <view class="content">
+            <text class="text">模式调节</text>
+            <radio-group class="group" bindchange="modechange">
+                  <radio value="60000" class="choice1" ></radio>随缘模式
+                  <radio value="60000" class="choice1"  checked="true"></radio>均衡模式
+                  <radio value="1000" class="choice1" ></radio>性能模式
+            </radio-group>
+     </view>
+     <view class="content">
+            <text class="text">时间设置</text><text class="notes">(预约时间到达前设置闹钟提醒)</text>
+            <radio-group class="group" bindchange="timechange">
+                  <view><radio value="4" class="choice1" checked="true"></radio>5 min</view>
+                  <view><radio value="20" class="choice1" ></radio>20 min</view>
+                  <view><radio value="35" class="choice1" ></radio>35 min</view>
+            </radio-group>    
+     </view>
+     <view class="content">
+            <text class="text">音乐提醒</text><text class="notes">(闹钟提醒时播放的音乐)</text>
+            <radio-group class="group" bindchange="musichange">
+                  <view><radio value="0" class="choice1" checked="true"></radio>星辰大海</view>
+                  <view><radio value="1" class="choice1" ></radio>日不落</view>
+                  <view><radio value="2" class="choice1" ></radio>赤伶</view>
+            </radio-group>
+     </view>
+     
+</view>

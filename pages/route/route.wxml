@@ -1,0 +1,6 @@
+<view>
+   <button  bindtap="sendMsg">发送订阅消息</button>   
+   <button bindtap="getaccess">获得access</button>
+   <button  bindtap="requestMsg">点击接受订阅消息</button>
+</view>
+<button bindtap="choseimage">点击选择图片</button>

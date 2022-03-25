@@ -1,0 +1,8 @@
+{ 
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "活动时间",
+  "navigationBarTextStyle": "black",
+  "component": true,
+  "usingComponents": {}
+}

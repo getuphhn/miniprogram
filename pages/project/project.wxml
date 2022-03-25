@@ -1,0 +1,72 @@
+<view class="cu-card case {{isCard?'no-card':''}}" bindtap="showStory">
+    <view class="cu-item shadow">
+        <view class="image">
+            <image src="https://s4.ax1x.com/2021/12/15/TpZsBt.jpg" mode="widthFix"></image>
+            <view class="cu-tag bg-blue">5.0</view>
+            <view class="cu-bar bg-shadeBottom">
+                <text class="text-cut">对于每一位特工而言，霸天虎过山车的任务将是一个千载难逢的机会！因为你将进入到利钻魔的体内，近距离观察能量晶体在其内部的运作情况！一定要小心行动，要知道任何一个错误的动作，都有可能唤醒这个巨大的机械生物，随即他那剃刀般的牙齿便会疯狂地旋转起来，撕碎一切！最后，请再次检查好你的装备，出发特工们！</text>
+            </view>
+        </view>
+        <view class="cu-list menu-avatar">
+            <view class="cu-item">
+                <view class="content flex-sub">
+                    <view class="text-grey">霸天虎过山车</view>
+                    <view class="text-gray text-sm flex justify-between">
+                        和汽车人一起，探寻能量晶体的奥秘！
+                        <view class="text-gray text-sm">
+                            <text class="cuIcon-messagefill margin-lr-xs"></text> 3w
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="cu-card case {{isCard?'no-card':''}}" bindtap="showStory">
+    <view class="cu-item shadow">
+        <view class="image">
+            <image src="https://s4.ax1x.com/2021/12/15/TpemDI.jpg" mode="widthFix"></image>
+            <view class="cu-tag bg-blue">4.9</view>
+            <view class="cu-bar bg-shadeBottom">
+                <text class="text-cut">特工们，邪恶的霸天虎正谋划着从汽车人手中抢夺最后一块火种源！而你是否有信心打败威震天，阻止他们的邪恶计划呢？赶紧跳上由变形金刚Evac变成的隐形运输机器人，与擎天柱一起为保护火种源而战吧！</text>
+            </view>
+        </view>
+        <view class="cu-list menu-avatar">
+            <view class="cu-item">
+                <view class="content flex-sub">
+                    <view class="text-grey">火种源争夺战</view>
+                    <view class="text-gray text-sm flex justify-between">
+                        保护火种源，阻止威震天！
+                        <view class="text-gray text-sm">
+                            <text class="cuIcon-messagefill margin-lr-xs"></text> 4.5w
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="cu-card case {{isCard?'no-card':''}}" bindtap="showStory">
+    <view class="cu-item shadow">
+        <view class="image">
+            <image src="https://s4.ax1x.com/2021/12/15/TpeYKs.jpg" mode="widthFix"></image>
+            <view class="cu-tag bg-blue">4.7</view>
+            <view class="cu-bar bg-shadeBottom">
+                <text class="text-cut">当你走进格鲁家，一定要留意脚下，否则一不小心就会被卷入小黄人“训练营”。随着身体慢慢“缩小”、“变色”，恭喜你，成为了他们中的一员！紧接着一场惊喜不断的冒险之旅将就此开启！</text>
+            </view>
+        </view>
+        <view class="cu-list menu-avatar">
+            <view class="cu-item">
+                <view class="content flex-sub">
+                    <view class="text-grey">神偷奶爸小黄人闹翻天</view>
+                    <view class="text-gray text-sm flex justify-between">
+                        捣蛋大军欢迎你！
+                        <view class="text-gray text-sm">
+                            <text class="cuIcon-messagefill margin-lr-xs"></text> 2.5w
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

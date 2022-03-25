@@ -27,12 +27,15 @@ view {
 
 .header image {
   margin-left: 4px;
+  margin-top: 3px;
   width: 40rpx;
   height: 40rpx;
+  float:left;
+
 }
 
 .search2 {
-  height: 18px;
+  height: 30px;
   width: 70%;
   float: left;
   background-color: white;
@@ -42,12 +45,18 @@ view {
   padding-bottom: 4px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  
 }
 
 .search {
-  float: right;
-  width: 89%;
-  height: 15px;
+  float: left;
+  width: 80%;
+  height: 20px;
+  font-size: 15px;
+
+  float:right;
+  margin-top:0px;
+  margin-left:-50px;
 }
 
 .search1 {
@@ -55,9 +64,23 @@ view {
   border-style: none;
   font-size: smaller;
   font-weight: 1px;
-  width: 5px;
-  height: 25px;
+  width:90%;
+  height: 30px;
   float: right;
+}
+.button{
+  float:left;
+}
+.button image{
+   float:left;
+   margin-left:-20px;
+   margin-top:-5px;
+}
+.search1 view{
+  font-size:15px;
+  float:right;
+  margin-top:-3px;
+  margin-right:-5px;
 }
 
 .container {
@@ -73,12 +96,11 @@ view {
   font-size: 16px;
   background-color: rgb(238, 237, 237);
   border: 0px solid red;
-  margin: 0 a;
-width:30%;
+width:40%;
 height:60%;
 float: left;
-margin-left: 45px;
-margin-top: 7px;
+margin-left: 35px;
+margin-top: 10px;
 padding-top: 5px;
 padding-left: 20px;
  border-top-left-radius: 20px;
@@ -91,8 +113,8 @@ padding-left: 20px;
   border-right: 1px ;
   background-color: rgb(238, 237, 237);
   border: 0px solid red;
-  width:30%;
-  margin-top: 7px;
+  width:40%;
+  margin-top: 10px;
   padding-left: 20px;
   padding-top: 5px;
   height:60%;
@@ -106,6 +128,12 @@ padding-left: 20px;
   width:50rpx;
   height:50rpx;
 }
+.addgroup text,.formgroup text{
+  margin-bottom: 50px;
+  float:right;
+  margin-right:10px;
+}
+
 
 /* 规则提示层  */
 .isRuleShow{
@@ -124,8 +152,8 @@ padding-left: 20px;
   left: 0;
 }
 .ruleZhezhaoContent{
-  padding: 20rpx 0;
-  height:200px;
+  padding: 20px;
+  height:250px;
   width: 80%;
   background: #e1d2b1;
   margin: 40% auto;
@@ -184,7 +212,7 @@ padding-left: 20px;
 }
 .innercontent{
   background-color: antiquewhite;
-  height:90%;
+  height:100%;
   width:90%;
 }
 .teamname,.teamnumber,.teamlabel{
@@ -193,19 +221,93 @@ padding-left: 20px;
   font-weight: 20px;
 }
 .input{
-  
   width:100%;
   background-color: white;
 }
 .list{
   width:20%;
+  height:30px;
   margin-left: 20px;
   border-radius: 4px;
   background-color: teal;
   float:left;
+  margin-bottom:5px;
+  font-size:10px;
+  padding-top:6px;
+  padding-left:10px; 
 }
 .submit{
   text-align: center;
   margin-top: 10px;
+}
+.member{
+  font-size:25px;
+  margin-left:4px;
+  display:inline-flex;
+ 
+}
+.group{
+   margin-top:10px;
+
+}
+.group checkbox{
+   float:right;
+   margin-bottom:5px;
+}
+.groupmate{
+  font-size:20px;
+  display:block;
+}  
+.groupid{
+  font-size:20px;
+  display:inline-flex;
+
+}
+.team{
+  width:80%;
+  height:300px;
+  position:fixed;
+  margin-top:50px;
+  margin-left:3px;
+}
+.searchresult{
+  width:80%;
+  height:300px;
+  position:fixed;
+  margin-top:50px;
+  margin-left:3px;
+}
+.mate{
+  background-color:white;
+  padding:5px 5px 5px 5px;
+}
+.mate button{
+  border-style: none;
+  font-size: 15px;
+  font-weight: 1px;
+  float:right;
+  margin-right:10px;
+  padding:0px;
+  height: 20px;
+  margin-top: 5px;
+  margin-bottom:10px;
+}
+.notsend{
+  background-color:green;
+  color:white; 
+
+}
+.send{
+  background-color:white;
+  color:gray;
+  margin-right:50px;
+}
+.mate .group{
+  border-bottom: 1px solid gray;
+}
+.groupresult{
+  font-size:20px;
+  display:inline-flex;
+  margin-bottom:5px;
 }
 /*  end  */

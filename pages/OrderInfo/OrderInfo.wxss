@@ -1,0 +1,365 @@
+.container{
+  height:auto;
+  width:100%;
+  margin-bottom:45px;
+}
+.container>text{
+  font-weight: bold;
+  font-size:20px;
+}
+.content{
+  width:90%;
+  height:80px;
+  border:1px solid black;
+  margin-top:3px;
+  position:relative;
+  background-color:rgb(241, 111, 64);
+  border-radius: 10px;
+}
+.kind{
+  position:absolute;
+  font-size:20px;
+  font-weight:bold;
+  display:inline-block;
+  left:3px;
+  top:3px;
+}
+.game{
+  
+  float:right;
+  margin-right:15px;
+  margin-top:5px;
+  display:inline-flex;
+  font-size:10px;
+}
+.date{
+  position:absolute;
+  font-size:20px;
+  font-weight:bold;
+  display:inline-flex;
+  left:3px;
+  top:40px;
+}
+.date_desc{
+  position:absolute;
+  font-size:15px;
+  font-weight:bold;
+  display:inline-flex;
+  right:20px;
+  top:40px;
+  display:inline-flex;
+}
+.content_1{
+  width:90%;
+  height:auto;
+  border:1px solid black;
+  margin-top:25px;
+  position:relative;
+  background-color:rgb(241, 111, 64);
+  border-radius: 10px;
+}
+.playerinfo{
+  font-size:20px;
+  font-weight:bold;
+  margin-top:3px;
+  margin-left:3px;
+  display:block
+}
+.player{
+  margin-left:3px;
+  margin-top:5px;
+  padding-bottom:5px;
+  border-bottom: 1px solid gray;
+}
+.playerorder{
+  display:inline-flex;
+  margin-top:3px;
+}
+.addinfo{
+  display:inline-flex;
+  float:right;
+  margin-top:3px;
+  margin-right:15px;
+  color:lightblue
+}
+.fillinfo{
+  position:fixed;
+  width:100%;
+  height:90%;
+  top:65px;
+  background-color:white;
+  z-index:20;
+  border:1px solid black;
+  border-radius: 15px;
+  position:relative;
+}
+.head{
+  height:40px;
+}
+.head >text:first-child{
+  color:aqua;
+  float:left;
+  margin-left:20px;
+  margin-top:5px;
+  font-size:15px;
+}
+.button{
+  background-color:white;
+  display:inline-flex;
+  float:right;
+  margin-right:20px;
+  margin-top:5px;
+}
+.head text:last-child{
+  color:aqua;
+  font-size:15px;
+}
+.info{
+  margin-left:15px;
+  border-bottom: 1px solid gray;
+  padding-bottom:5px;
+}
+
+.info text :last-child{
+  margin-right:15px;
+}
+.info_ {
+   margin-left:15px;
+   margin-top:15px;
+   border-bottom: 1px solid gray;
+   padding-bottom:5px;
+}
+.desc6{
+   width:70%;
+}
+.identity{
+   position:fixed;
+   top:145px;
+   right:10px;
+   width:25%;
+   height:70px;
+}
+.identity image{
+   float:right;
+   margin-right:10px;
+   margin-bottom:5px;
+}
+.identity text{
+  float:right;
+  margin-top:45px;
+  margin-right:-50px;
+  
+}
+.info_ text{
+   display:inline-flex;
+}
+.info_ input{
+   float:right;
+   width:220px;
+   margin-right:20px;
+   height:15px;
+   padding-bottom:5px;
+   
+}
+.desc6 input{
+  width:120px;
+
+  float:right;
+  margin-right:40px;
+  padding-bottom:5px;
+}
+.holder{
+  width:100%;
+  height:500px;
+  background-color: gray;
+  z-index:19;
+  position:fixed;
+  top:0px;
+}
+.choice{
+  margin-right:5px;
+  margin-top:3px;
+}
+.choice1{
+  margin-left:20px;
+  margin-right:3px;
+}
+.radio-group view{
+   width:45%;
+   margin-left:5px;
+   font-size:15px;
+   display:inline-flex;
+}
+.radio-group view text{
+  margin-top:5px;
+}
+.group{
+  margin-left:30px;
+  
+}
+.candidate{
+   border-radius: 14px;
+   text-align:center;
+   padding:5px;
+   margin-left:5px;
+   margin-top:10px;
+   background-color: white;
+   font-size:15px;
+   width:auto;
+   display: inline-block;
+}
+
+.choosedinfo{
+
+   margin-left:50px;
+ 
+   margin-top:-10px;
+}
+.choosedinfo text{
+  display:block;
+  color: silver;
+}
+.people{
+  border:1px solid gray
+}
+.friend{
+  border:2px solid yellow;
+}
+.deleteplayer{
+  position:fixed;
+  bottom:20px;
+  left:65px;
+}
+.deleteplayer button{
+  background-color:white;
+  border-radius:15px;
+  border:1px solid gray;
+  box-shadow: 1px 3px 1px #888888; 
+  padding:3px;
+  text-align:center;
+}
+.content_2{
+  width:90%;
+  height:auto;
+  border:1px solid black;
+  margin-top:25px;
+  position:relative;
+  background-color:rgb(241, 111, 64);
+  border-radius: 10px;
+  padding-bottom: 3px;
+}
+.bookinfo{
+  font-size:20px;
+  font-weight:bold;
+  margin-top:4px;
+  margin-left:3px;
+}
+.desc_1{
+  float:right;
+  margin-right:160px;
+  color:rgb(238, 186, 91);
+  font-size:15px;
+  margin-top:4px;
+}
+.desc_2{
+  margin-left:3px;
+}
+.desc_3{
+  margin-left:3px;
+  margin-top:10px;
+  margin-bottom:5px;
+}
+.desc_4{
+   float:right;
+   width:200px;
+   margin-right:3px;
+   border-bottom:1px solid white;
+}
+.end{
+   background-color:white;
+   position:fixed;
+   bottom:0px;
+   height:40px;
+   width:100%;
+   z-index:19;
+}
+.end text{
+   float:left;
+   margin-left:10px;
+   font-size:20px;
+   color:bold;
+   text-align: center;
+   display:inline-flex;
+   margin-top:4px;
+}
+.end view{
+   height:35px;
+   width:60px;
+   background-color: white;
+   border-radius: 15px;
+   float:right;
+   margin-bottom:2px;
+   margin-right:20px;
+   border:1px solid gray;
+}
+.end view>text{
+   margin-top:3px;
+   font-size:20px;
+   color:bold;
+}
+.backgd{
+  width:100%;
+  height:100%;
+  background-color: #858585b6;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index:20;
+}
+.remind{
+  background-color:white;
+  width:90%;
+  height:250px;
+  position:fixed;
+  top:80px;
+  left:15px;
+  border-radius:15px;
+  z-index:22;
+}
+.remind>text{
+  color:gray;
+  font-size:15px;
+  display:block;
+  margin-left:20px;
+  margin-top:10px;
+  letter-spacing: 2px;
+}
+.bar button{
+  text-align:center;
+  border-width:0px;
+  outline:none;
+  color:black;
+  font-weight:bold;
+  background-color: rgba(228, 225, 225, 0.979);
+  display:inline-block;
+}
+.bar{
+    position:absolute;
+    bottom:0px;
+    width:100%;
+    height:43px;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;
+    background:rgba(228, 225, 225, 0.979);
+    padding-bottom:3px;
+}
+.pay{
+  color:black;
+  font-weight: bold;
+  font-size:20px;
+  margin-left:100px;
+  margin-top:10px;
+}
+.desc5{
+   margin-bottom:10px;
+}

@@ -1,0 +1,45 @@
+<view class="date">
+  <image class="direction" src="https://s4.ax1x.com/2022/02/24/bi8yfH.png" bindtap='minusMouth' />
+  <label>{{year}}年{{mouth}}月</label>
+  <image class="direction" src="https://s4.ax1x.com/2022/02/24/bi8GY4.png" bindtap='plusMouth' />
+</view>
+<view class="header">
+  <block wx:for="{{weeks}}" wx:key="index">
+    <text class="weeks-item-text">{{item}}</text>
+  </block>
+</view>
+
+<view class="body-days">
+  <block wx:for="{{days}}" wx:key="index">
+    <block wx:if="{{item !== nowDate }}">
+      <view class="days-item" data-date='{{year}}-{{mouth}}-{{item}}' bindtap='selDate'>
+        <view class="days-item-text" wx:if="{{item>0}}" hover-class="days-item-text-hover">{{item}}
+          <view wx:for="{{listdate}}" wx:key="index">{{listdate[index].date.substring(8,10)}}
+            <view wx:if="{{listdate[index].date.substring(8,10)===17 }}">
+              <image class="have_activities" src="https://s4.ax1x.com/2022/02/24/biaN5V.png" />
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="days-item days-item-selected" data-date='{{year}}-{{mouth}}-{{item}}' bindtap='selDate'>
+        <view class="days-item-text" wx:if="{{item>0}}">{{item}}</view>
+      </view>
+    </block>
+  </block>
+</view>
+
+<view class="activities" wx:if="item<nowDate">
+  <view wx:for="{{activities}}" wx:key="index" class="show_activity">
+    <view><text>活动日期：{{activities[index].date}}\n活动主题：{{activities[index].name}}\n具体时间：{{activities[index].time}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="activities" wx:else=item>nowDate">
+  <view wx:for="{{activities}}" wx:key="index" class="show_activity1">
+    <view><text>活动日期：{{activities[index].date}}\n活动主题：{{activities[index].name}}\n具体时间：{{activities[index].time}}</text>
+    </view>
+  </view>
+</view>

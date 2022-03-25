@@ -1,0 +1,109 @@
+<wxs src="../../utils/select.wxs" module="tools" />
+<view class='container'>
+     <!--<text>订单信息</text>-->
+     <view class='content'>
+          <text class='kind'>门票种类:</text>
+          <view wx:for="{{goods}}" wx:key='*this' class='game'>{{item.name}}x{{item.number}}</view>
+          <text class='date'>游玩日期:</text>
+          <view class='date_desc'>{{choose_date}}</view>
+     </view>
+     <view class="content_1">
+          <text class='playerinfo'>游客信息</text>
+          <block wx:if="{{tourist.length!=0}}">
+               <view wx:for="{{tourist}}" wx:key='*this' data-index="{{index}}" class="candidate {{tools.findplayer(tourist_play,item.id)?'friend':'people'}}" bindtap="{{tools.findplayer(tourist_play,item.id)?'removeplayer':'addplayer'}}">
+                    {{item.name}}
+               </view>
+          </block>
+          <view wx:for='{{number*1}}' wx:key='*this' class='player' wx:for-index="idx">
+
+               <text class='playerorder'>游客{{idx+1}}</text>
+               <block wx:if="{{tourist_play.length<idx+1}}">
+                    <text class="addinfo" data-index='{{idx}}' bindtap="edit">编辑</text>
+                    <text class='addinfo' data-index='{{idx}}' bindtap="edit" style="margin-right:60px">点击补全游客信息</text>
+               </block>
+               <block wx:elif="{{tourist_play.length>=idx+1}}">
+                    <view class="choosedinfo">
+                         <text>{{tourist_play[idx].name}}{{idx==0?'(队长)':''}}</text>
+                         <text class="addinfo" style="margin-top:0px" data-index='{{idx}}' bindtap="updateplayer">编辑</text>
+                         <text>{{tourist_play[idx].id}}</text>
+                    </view>
+               </block>
+          </view>
+     </view>
+     <view class="content_2">
+            <text class="bookinfo">预约信息</text>
+            <text class="desc_1">选填</text>
+            <view>
+                <form>
+                    <view class="desc5">
+                         <text class="desc_2">到达时间：</text><input type="text" name=" arrivetime" class="desc_4"/>
+                    </view>
+                    <text class="desc_3">预约项目</text>
+                    <checkbox-group class="radio-group" >
+                                <view><checkbox value="霸天虎过山车" class="choice" ></checkbox><text>霸天虎过山车</text></view>      
+                                <view> <checkbox value="火种争夺战" class="choice" ></checkbox><text>火种争夺战</text></view>    
+                                <view><checkbox value="小黄人世界" class="choice" ></checkbox><text>擎天柱乐园</text></view>      
+                                <view><checkbox value="小黄人世界" class="choice" ></checkbox><text>小黄人世界</text></view>     
+                    </checkbox-group>
+                </form>
+            </view>
+     </view>
+</view>
+<view class="end">
+    <text>合计:￥{{money_count}}</text>  <view bindtap="remind"><text>支付</text></view>
+</view>
+<view class="holder" wx:if="{{condition=='true'}}">
+     <view class="fillinfo" wx:if="{{condition=='true'}}">
+          <form bindsubmit="submitForm">
+               <view class="head">
+                    <text bindtap="cancelfill">取消</text>
+                    <text style=" float:left;margin-left:70px;color:black;font-weight:bold;font-size:20px; ">新增游客</text>
+                    <view class="button">
+                         <button formType="submit" style="width:auto;background-color:white;padding:0px;" ><text style="font-size:15px; color:aqua;">完成</text></button>
+                    </view>
+               </view>
+               <view   wx:if="{{updx.length==0}}"  class="identity">
+                     <image src='https://s1.ax1x.com/2022/03/22/qKS8Qe.png' style="width:55px;height:50px;" bindtap="choseimage"></image>
+                     <text>拍照识别</text>
+               </view>
+               <view class='info'>
+                    <text>证件类型</text> <text> 身份证</text>
+               </view>
+               <view class="info_ {{updx.length==0?'desc6':''}}">
+                    <text>姓名</text> <input type="text" name="name" auto-focus="true" value="{{updx.length==0?name:tourist_play[updx].name}}" />
+               </view>
+               <view class="info_  {{updx.length==0?'desc6':''}} ">
+                    <text>证件号</text><input type="text" name="id" value="{{updx.length==0?id:tourist_play[updx].id}}" />
+               </view>
+               <view class="info_">
+                    <text>手机号</text><input type="text" name="phone" value="{{tourist_play[updx].phone}}" />
+               </view>
+               <view class="info_">
+                    <text style="display:inline-flex">性别</text>
+                    <radio-group class="group" bindchange="radiochange">
+                         <radio value="成人" class="choice1" checked="{{tourist_play[updx].identity=='成人'}}"></radio>成人
+                         <radio value="儿童" class="choice1" checked="{{tourist_play[updx].identity=='儿童'}}"></radio>儿童
+                         <radio value="学生" class="choice1" checked="{{tourist_play[updx].identity=='学生'}}"></radio>学生
+                    </radio-group>
+               </view>
+               <view style="display:none">
+                    <text>插入时间</text><input type="text" name="date" value="{{tourist_play[updx].date}}" />
+               </view>
+               <view wx:if="{{updx.length!=0}}" class="deleteplayer">
+                    <button formType="submit"><text bindtap="deleteplayer">删除游客</text></button>
+               </view>
+          </form>
+     </view>
+</view>
+<view class="backgd" wx:if="{{payfor=='true'}}">
+<view class="remind" wx:if="{{payfor=='true'}}">
+     <view class="pay">支付提醒</view>
+     <text>支付后所选游客将默认为一个队伍,</text>
+     <text>第一位游客将成为队长，队员将与其操作行为一致。</text>
+     <text>如需更改请在“我的-队伍管理”中调整。</text>
+     <view class="bar">  
+          <button style="width:45%; height: 40px;float:left" bindtap="cancel">取消</button> 
+          <button bindtap="add" class="sure" style="width:45%; height:40px;float:right;">确定</button>
+     </view>     
+</view>
+</view>
